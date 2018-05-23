@@ -1,0 +1,13 @@
+{
+   "methods" : {
+      "setAddressClassifier(address)" : {
+         "notice" : "Set new address classifier to be used by this smart contract.\r "
+      },
+      "setUnfreezeTime(address,uint256)" : {
+         "notice" : "Set unfreeze time for given token.\r "
+      },
+      "transferAuthorized(address,address,address,uint256)" : {
+         "notice" : "Check authorization for given token transfer.\r "
+      }
+   }
+}
