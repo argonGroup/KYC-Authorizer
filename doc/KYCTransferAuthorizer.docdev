@@ -1,13 +1,34 @@
 {
    "methods" : {
+      "getUnfreezeTime(address,address)" : {
+         "params" : {
+            "_owner" : "token owner to get unfreeze time for\r",
+            "_token" : "token to get unfreeze time for the owner of\r"
+         },
+         "return" : "unfreeze time for given owner of given token\r"
+      },
+      "isAuthorizedAddress(address,address)" : {
+         "params" : {
+            "_address" : "address to get authorization of\r",
+            "_token" : "token to get authorization to change unfreeze times for the\r       owners of\r"
+         }
+      },
       "setAddressClassifier(address)" : {
          "params" : {
             "_addressClassifier" : "new address classifier to be used by this smart\r       contract\r"
          }
       },
-      "setUnfreezeTime(address,uint256)" : {
+      "setAuthorizedAddress(address,address,bool)" : {
          "params" : {
-            "_token" : "token to set unfreeze time for.\r",
+            "_address" : "address to set authorization for the owner of\r",
+            "_authorized" : "true to authorize, false to revoke authorization\r",
+            "_token" : "token to set authorization to change unfreeze times for the\r       owners of\r"
+         }
+      },
+      "setUnfreezeTime(address,address,uint256)" : {
+         "params" : {
+            "_owner" : "token owner to set unfreeze time for\r",
+            "_token" : "token to set unfreeze time for the owner of\r",
             "_unfreezeTime" : "unfreeze time for given token\r"
          }
       },

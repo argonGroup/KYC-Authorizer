@@ -1,6 +1,6 @@
 /*
  * EIP-20 Standard Token Smart Contract Interface.
- * Copyright © 2016–2018 by Argon Investments Management.
+ * Copyright © 2016–2018 by ABDK Consulting.
  * Author: Mikhail Vladimirov <mikhail.vladimirov@gmail.com>
  */
 pragma solidity ^0.4.20;

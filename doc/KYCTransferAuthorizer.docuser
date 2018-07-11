@@ -1,10 +1,19 @@
 {
    "methods" : {
+      "getUnfreezeTime(address,address)" : {
+         "notice" : "Get unfreeze time for given owner of given token.\r "
+      },
+      "isAuthorizedAddress(address,address)" : {
+         "notice" : "Tell whether owner of given address is authorized to set unfreeze times for\r the owners of given token.\r "
+      },
       "setAddressClassifier(address)" : {
          "notice" : "Set new address classifier to be used by this smart contract.\r "
       },
-      "setUnfreezeTime(address,uint256)" : {
-         "notice" : "Set unfreeze time for given token.\r "
+      "setAuthorizedAddress(address,address,bool)" : {
+         "notice" : "Set authorization of the owner of given address to set unfreeze times for\r the owners of given token.\r "
+      },
+      "setUnfreezeTime(address,address,uint256)" : {
+         "notice" : "Set unfreeze time for given owner of given token.\r "
       },
       "transferAuthorized(address,address,address,uint256)" : {
          "notice" : "Check authorization for given token transfer.\r "

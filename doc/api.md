@@ -60,16 +60,67 @@ Does not accept ether.
 
 * SetAddressClassifier
 
-### 2.3. setUnfreezeTime(Token,uint256)
+### 2.3. setUnfreezeTime(Token,address,uint256)
 
 ##### Signature:
 
-    function setUnfreezeTime (Token _token, uint256 _unfreezeTime) public
+    function setUnfreezeTime (
+      Token _token, address _owner, uint256 _unfreezeTime) public
 
 ##### Description:
 
-Set unfreeze time for given token `_token` to given time `_unfreezeTime`.
+Set unfreeze time for given owner `_owner` of given token `_token` to given time `_unfreezeTime`.
 
 ##### Use Cases:
 
 * SetUnfreezeTime
+
+### 2.4. getUnfreezeTime(Token,address)
+
+##### Signature:
+
+    function getUnfreezeTime (
+      Token _token, address _owner) public view returns (uint256)
+
+##### Description:
+
+Get unfreeze time for given owner `_owner` of given token `_token`.
+
+##### Use Cases:
+
+* GetUnfreezeTime
+
+### 2.5. setAuthorizedAddress (Token,address,bool)
+
+##### Signature:
+
+    function setAuthorizedAddress (
+      Token _token, address _address, bool _authorized)
+    public
+
+##### Description:
+
+Depending on value of `_authorized` flag, set whether given address `_address`
+is authorized to change unfreeze times for the owners of given token `_token`.
+
+##### Use Cases:
+
+* SetAuthorizedAddress
+
+### 2.6. isAuthorizedAddress (Token, address)
+
+##### Signature:
+
+    function isAuthorizedAddress (Token _token, address _address)
+    public view returns (bool)
+
+##### Description:
+
+Tell whether owner of given address `_address` is authorized to change unfreeze
+times for the owners of given token `_token`.
+
+##### Use Cases:
+
+* IsAuthorizedAddress
+
+

@@ -41,20 +41,68 @@ Address classifier used by this smart contract.
 * Deploy
 * SetAddressClassifier
 
-### 1.3. unfreezeTimes
+### 1.3. unfreezeTimesZeroBalance
 
 ##### Signature:
 
-    mapping (address => uint256) internal unfreezeTimes
+    mapping (address => mapping (address => uint256))
+    internal unfreezeTimesZeroBalance
 
 ##### Description:
 
-Maps address of token smart contract to corresponding unfreeze time.
+Maps address of token smart contract to the mapping from address of token owner to corresponding unfreeze time.
+Used only for addresses with zero balances.
 
 ##### Used in Use Cases:
 
 * CheckAuthorization
+* GetUnfreezeTime
 
 ##### Modified in Use Cases:
 
+* CheckAuthorization
 * SetUnfreezeTime
+
+### 1.4. unfreezeTimesNonZeroBalance
+
+##### Signature:
+
+    mapping (address => mapping (address => uint256))
+    internal unfreezeTimesNonZeroBalance
+
+##### Description:
+
+Maps address of token smart contract to the mapping from address of token owner to corresponding unfreeze time.
+Used only for addresses with non-zero balances.
+
+##### Used in Use Cases:
+
+* CheckAuthorization
+* GetUnfreezeTime
+
+##### Modified in Use Cases:
+
+* CheckAuthorization
+* SetUnfreezeTime
+
+### 1.5. authorizedAddresses
+
+##### Signature:
+
+    mapping (address => mapping (address => bool)) internal authorizedAddresses
+
+##### Description:
+
+Maps address to token smart contract to the mapping from address to the flags
+telling whether the owner of this address is authorized to change unfreeze times
+for the ownners of this token.
+
+##### Used in Use Cases:
+
+* SetUnfreezeTime
+* IsAuthorizedAddress
+
+##### Modified in Use Cases
+
+* SetAuthorizedAddress
+
