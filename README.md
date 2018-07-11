@@ -1,18 +1,18 @@
-# KYC Transfer Authorizer smart contract #
+# KYC Transfer Authorizer smart contract
 
-KYC Transfer Authorizer smart contracts.  Copyright © 2018 by ABDK Consulting.
+KYC Transfer Authorizer smart contracts. Copyright © 2018 by Argon Investments Management.
 
-**Author:** Mikhail Vladimirov <mikhail.vladimirov@gmail.com>
+**Author:** Mikhail Vladimirov
 
-## How to Deploy ##
+## How to Deploy
 
 In order to deploy KYC Transfer Authorizer Smart Contract you need the following
 software to be properly installed on your system:
 
-1. Geth 1.6.5+ (https://geth.ethereum.org/)
+1.  Geth 1.6.5+ (https://geth.ethereum.org/)
 
 Also, you need Ethereum node running on your system and synchronized with the
-network.  If you do not have one, you may run it via one of the following
+network. If you do not have one, you may run it via one of the following
 commands depending on whether you want to connect to PRODNET or TESTNET:
 
     geth
@@ -24,7 +24,7 @@ flag to speed up initial synchronization:
     geth --fast
     geth --testnet --fast
 
-Also you need at least one account in your node.  If you do not have any
+Also you need at least one account in your node. If you do not have any
 accounts, you may create one using the following commands:
 
     geth attach
@@ -38,18 +38,18 @@ You will also need some ether on your primary account.
 
 In order to deploy KYC Transfer Authorizer Smart Contract do the following:
 
-1. Go to the directory containing deployment script, i.e. file named
-   `KYCTransferAuthorizerDeploy.js`.
-2. Attach to your local Ethereum node: `geth attach`
-3. Set smart contract owner like this:
-   `var owner = '0x0123456789012345678901234567890123456789';`
-4. Set address classifier address like this:
-   `var addressClassifier = '0x9876543210987654321098765432109876543210';`
-5. Unlock your primary account:
-   `personal.unlockAccount (web3.eth.accounts [0]);` (you will be
-   asked for your passphrase here)
-6. Run deployment script: `loadScript ("KYCTransferAuthorizerDeploy.js");`
-7. If everything will go fine, after several seconds you will see message like
-   the following: `Deployed at ... (tx: ...)`,
-   which means that your contract was deployed (message shows address of the
-   contract and hash of the transaction the contract was deployed by)
+1.  Go to the directory containing deployment script, i.e. file named
+    `KYCTransferAuthorizerDeploy.js`.
+2.  Attach to your local Ethereum node: `geth attach`
+3.  Set smart contract owner like this:
+    `var owner = '0x0123456789012345678901234567890123456789';`
+4.  Set address classifier address like this:
+    `var addressClassifier = '0x9876543210987654321098765432109876543210';`
+5.  Unlock your primary account:
+    `personal.unlockAccount (web3.eth.accounts [0]);` (you will be
+    asked for your passphrase here)
+6.  Run deployment script: `loadScript ("KYCTransferAuthorizerDeploy.js");`
+7.  If everything will go fine, after several seconds you will see message like
+    the following: `Deployed at ... (tx: ...)`,
+    which means that your contract was deployed (message shows address of the
+    contract and hash of the transaction the contract was deployed by)

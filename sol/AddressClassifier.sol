@@ -1,7 +1,7 @@
 /*
  * Address Classifier smart contract interface.
  * Copyright © 2018 by Argon Investments Management.
- * Author: Mikhail Vladimirov <mikhail.vladimirov@gmail.com>
+ * Author: Mikhail Vladimirov
  */
 pragma solidity ^0.4.20;
 

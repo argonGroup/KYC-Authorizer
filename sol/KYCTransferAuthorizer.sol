@@ -1,7 +1,7 @@
 /*
  * KYC Transfer Authorizer Smart Contract.
- * Copyright © 2018 by ABDK Consulting.
- * Author: Mikhail Vladimirov <mikhail.vladimirov@gmail.com>
+ * Copyright © 2018 by Argon Investments Management.
+ * Author: Mikhail Vladimirov
  */
 pragma solidity ^0.4.20;
 

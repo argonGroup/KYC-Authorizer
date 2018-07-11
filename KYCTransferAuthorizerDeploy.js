@@ -1,7 +1,7 @@
 /*
  * Deployment script for KYC Transfer Authorizer Smart Contract.
- * Copyright © 2018 by ABDK Consulting.
- * Author: Mikhail Vladimirov <mikhail.vladimirov@gmail.com>
+ * Copyright © 2018 by Argon Investments Management
+ * Author: Mikhail Vladimirov
  */
 
 if (!web3.eth.contract ([{"constant":true,"inputs":[{"name":"_token","type":"address"},{"name":"_address","type":"address"}],"name":"isAuthorizedAddress","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"_token","type":"address"},{"name":"_owner","type":"address"}],"name":"getUnfreezeTime","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"_token","type":"address"},{"name":"_from","type":"address"},{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transferAuthorized","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_token","type":"address"},{"name":"_owner","type":"address"},{"name":"_unfreezeTime","type":"uint256"}],"name":"setUnfreezeTime","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"_token","type":"address"},{"name":"_address","type":"address"},{"name":"_authorized","type":"bool"}],"name":"setAuthorizedAddress","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"_addressClassifier","type":"address"}],"name":"setAddressClassifier","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"inputs":[{"name":"_owner","type":"address"},{"name":"_addressClassifier","type":"address"}],"payable":false,"stateMutability":"nonpayable","type":"constructor"}]).new (
